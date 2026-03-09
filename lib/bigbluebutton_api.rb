@@ -67,7 +67,7 @@ module BigBlueButton
     # secret::    Shared secret for this server
     # version::   API version e.g. 0.81
     # logger::    Logger object to log actions (so apps can use their own loggers)
-    # algorithm:: Define which algorithm to use
+    # algorithm:: Define which algorithm to use [sha1, sha256, sha512]
     def initialize(url, secret, version=nil, logger=nil, algorithm="sha1")
       @supported_versions = ['0.8', '0.81', '0.9', '1.0']
       @url = url.chomp('/')

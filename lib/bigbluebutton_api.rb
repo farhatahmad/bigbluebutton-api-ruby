@@ -725,7 +725,7 @@ module BigBlueButton
       case @algorithm
       when "sha512"
         Digest::SHA512.hexdigest(checksum_param)
-      when "sha2", "sha256", true
+      when "sha2", "sha256", true # checks true for legacy support
         Digest::SHA256.hexdigest(checksum_param)
       else
         Digest::SHA1.hexdigest(checksum_param)
